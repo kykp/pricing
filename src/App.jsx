@@ -15,7 +15,7 @@ function App() {
   const [pricing, setPricing] = useState(0);
 
   const handleCheckBox = (e) => {
-    const val = e.target.value;
+    const val = +e.target.value;
     if (val === 0) {
       setPricing(1);
     } else {
@@ -29,7 +29,7 @@ function App() {
         <h2>Our Pricing</h2>
         <div className="pricing__toggle">
           <p>Annually</p>
-          <label class="form-switch">
+          <label className="form-switch">
             <input type="checkbox" onClick={handleCheckBox} value={pricing} />
             <i></i>
           </label>
