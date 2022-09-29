@@ -143,7 +143,11 @@ body {
 }
 .button-background {
   color: white;
-  background-image: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%)); 
+  background-image: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));   
+  transition: color 0.5s ease-in-out;
+}
+.button-background:hover { 
+  color:black; 
 }
 .block__amount{
   font-size: 45px;
@@ -151,7 +155,13 @@ body {
 .button-block-middle {
   background-color: white;
   color:#4158D0;
-  border: none;    
+  border: 1px solid transparent;
+  transition: background-color 0.5s ease-in-out;
+}
+.button-block-middle:hover {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
 }
  
 @media screen and (max-width: 800px) { 
