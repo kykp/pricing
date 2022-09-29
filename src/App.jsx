@@ -17,9 +17,9 @@ function App() {
   const handleCheckBox = (e) => {
     const val = e.target.value;
     if (val === 0) {
-      setPricing(0);
-    } else {
       setPricing(1);
+    } else {
+      setPricing(0);
     }
   };
 
