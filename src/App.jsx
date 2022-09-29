@@ -12,14 +12,14 @@ const priceMonthly = {
 };
 
 function App() {
-  const [pricing, setPricing] = useState("year");
+  const [pricing, setPricing] = useState(0);
 
   const handleCheckBox = (e) => {
     const val = e.target.value;
-    if (val === "year") {
-      setPricing("month");
+    if (val === 0) {
+      setPricing(1);
     } else {
-      setPricing("year");
+      setPricing(0);
     }
   };
 
@@ -39,7 +39,7 @@ function App() {
       <div className="app">
         <div className="block block-color">
           <p>Basic</p>
-          {pricing === "year" ? (
+          {pricing === 0 ? (
             <p className="block__amount">${priceYearly.basic}</p>
           ) : (
             <p className="block__amount">${priceMonthly.basic}</p>
@@ -56,7 +56,7 @@ function App() {
         <div className="block block-middle">
           <div className="block">
             <p>Professional</p>
-            {pricing === "year" ? (
+            {pricing === 0 ? (
               <p className="block__amount">${priceYearly.professional}</p>
             ) : (
               <p className="block__amount">${priceMonthly.professional}</p>
@@ -71,7 +71,7 @@ function App() {
         </div>
         <div className="block block-color">
           <p>Master</p>
-          {pricing === "year" ? (
+          {pricing === 0 ? (
             <p className="block__amount">${priceYearly.master}</p>
           ) : (
             <p className="block__amount">${priceMonthly.master}</p>
